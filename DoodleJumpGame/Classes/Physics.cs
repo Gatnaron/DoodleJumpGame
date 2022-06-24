@@ -39,7 +39,7 @@ namespace DoodleJumpGame.Classes
                 transform.position.Y += gravity;
                 gravity += a;
 
-                if(gravity > -25 && usedBonus)
+                if (gravity > -25 && usedBonus)
                 {
                     PlatformController.GenerateStartSequence();
                     PlatformController.GenerateRandomPlatform();
