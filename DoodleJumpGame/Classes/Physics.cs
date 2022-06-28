@@ -10,7 +10,7 @@ namespace DoodleJumpGame.Classes
     public class Physics
     {
         public Transform transform;
-        float gravity;
+        public float gravity;
         float a;
 
         public float dx;
@@ -43,7 +43,7 @@ namespace DoodleJumpGame.Classes
                 {
                     PlatformController.GenerateStartSequence();
                     PlatformController.GenerateRandomPlatform();
-                    PlatformController.startPlatformPosY = -320;
+                    PlatformController.startPlatformPosY = -340;
                     PlatformController.GenerateStartSequence();
                     PlatformController.startPlatformPosY = 0;
                     usedBonus = false;

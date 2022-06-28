@@ -99,14 +99,7 @@ namespace DoodleJumpGame
                     }
                 }
             }
-            if (player.physics.StandartCollidePlayerWithObjects(false, true)) 
-            {
-                for (int i = 0; i < PlatformController.bonuses.Count; i++)
-                {
-                    var bonus = PlatformController.bonuses[i];
-                    if (bonus.type == 2) player.sprite = Properties.Resources.man_jetpack;
-                }
-            }
+            
             player.physics.ApplyPhysics();
             FollowPlayer();
 
