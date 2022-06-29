@@ -66,8 +66,10 @@ namespace DoodleJumpGame.Classes
                     {
                         if (Math.Abs(delta.Y) <= transform.size.Height / 2 + enemy.physics.transform.size.Height / 2)
                         {
-                            if(!usedBonus)
+                            if (!usedBonus)
+                            {
                                 return true;
+                            }
                         }
                     }
                 }
@@ -87,11 +89,13 @@ namespace DoodleJumpGame.Classes
                             if(bonus.type == 1 && !usedBonus)
                             {
                                 usedBonus = true;
+                                PlatformController.score += 50;
                                 AddForce(-30);
                             }
                             if (bonus.type == 2 && !usedBonus)
                             {
                                 usedBonus = true;
+                                PlatformController.score += 100;
                                 AddForce(-60);
                             }
                             return true;

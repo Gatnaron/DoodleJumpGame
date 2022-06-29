@@ -5,11 +5,12 @@ using System.Windows.Forms;
 
 namespace DoodleJumpGame
 {
-    public partial class Form1 : Form
+    public partial class DoodleJump : Form
     {
         Player player;
         Timer timer1;
-        public Form1()
+
+        public DoodleJump()
         {
             InitializeComponent();
             Init();
@@ -69,7 +70,8 @@ namespace DoodleJumpGame
 
         private void Update(object sender, EventArgs e)
         {
-            this.Text = "Score -" + PlatformController.score;
+            
+            this.labelScore.Text = "Счёт: " + PlatformController.score;
 
             if ((player.physics.transform.position.Y >= PlatformController.platforms[0].transform.position.Y + 200) || player.physics.StandartCollidePlayerWithObjects(true, false)) 
                 Init();
@@ -164,6 +166,20 @@ namespace DoodleJumpGame
                 }
             }
             player.DrawSprite(g);
+        }
+
+
+        private void restartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Init();
+        }
+
+        Form2 f2;
+
+        private void обучениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            f2 = new Form2();
+            f2.Show();
         }
     }
 }
